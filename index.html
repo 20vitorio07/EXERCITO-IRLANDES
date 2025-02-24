@@ -2,67 +2,83 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
-const Home = () => (
-  <div className="p-6 text-center bg-green-500 text-white">
-    <h1 className="text-3xl font-bold">Exército Irlandês - Habbo Hotel</h1>
-    <p className="mt-2 text-lg">Bem-vindo ao site oficial do Exército Irlandês no Habbo Hotel.</p>
-    <div className="mt-4">
+const PageLayout = ({ title, text, bgColor, textColor }) => (
+  <div className={`p-6 text-center ${bgColor} ${textColor}`}>
+    <h1 className="text-4xl font-bold">{title}</h1>
+    <p className="mt-4 text-lg">{text}</p>
+    <div className="mt-6">
       <Button asChild>
-        <Link to="/recrutamento">Recrutamento</Link>
+        <Link to="/">Voltar</Link>
       </Button>
     </div>
   </div>
 );
 
+const Home = () => (
+  <PageLayout 
+    title="Exército Irlandês - Habbo Hotel" 
+    text="Bem-vindo ao site oficial do Exército Irlandês no Habbo Hotel." 
+    bgColor="bg-green-500" 
+    textColor="text-white" 
+  />
+);
+
 const Recrutamento = () => (
-  <div className="p-6 text-center bg-orange-500 text-white">
-    <h1 className="text-3xl font-bold">Recrutamento</h1>
-    <p className="mt-2 text-lg">Junte-se ao Exército Irlandês e faça parte da nossa equipe!</p>
-    <Button asChild>
-      <Link to="/">Voltar</Link>
-    </Button>
-  </div>
+  <PageLayout 
+    title="Recrutamento" 
+    text="Junte-se ao Exército Irlandês e faça parte da nossa equipe!" 
+    bgColor="bg-orange-500" 
+    textColor="text-white" 
+  />
 );
 
 const Hierarquia = () => (
-  <div className="p-6 text-center bg-white text-black">
-    <h1 className="text-3xl font-bold">Hierarquia</h1>
-    <p className="mt-2 text-lg">Conheça as patentes e posições dentro do Exército Irlandês.</p>
-  </div>
+  <PageLayout 
+    title="Hierarquia" 
+    text="Conheça as patentes e posições dentro do Exército Irlandês." 
+    bgColor="bg-white" 
+    textColor="text-black" 
+  />
 );
 
 const Comunicacao = () => (
-  <div className="p-6 text-center bg-green-500 text-white">
-    <h1 className="text-3xl font-bold">Comunicação</h1>
-    <p className="mt-2 text-lg">Saiba como se comunicar através do Discord e TeamSpeak.</p>
-  </div>
+  <PageLayout 
+    title="Comunicação" 
+    text="Saiba como se comunicar através do Discord e TeamSpeak." 
+    bgColor="bg-green-500" 
+    textColor="text-white" 
+  />
 );
 
 const Treinamento = () => (
-  <div className="p-6 text-center bg-orange-500 text-white">
-    <h1 className="text-3xl font-bold">Treinamento e Instituições</h1>
-    <p className="mt-2 text-lg">Informações sobre academias e programas de treinamento.</p>
-  </div>
+  <PageLayout 
+    title="Treinamento e Instituições" 
+    text="Informações sobre academias e programas de treinamento." 
+    bgColor="bg-orange-500" 
+    textColor="text-white" 
+  />
 );
 
 const Veteranos = () => (
-  <div className="p-6 text-center bg-white text-black">
-    <h1 className="text-3xl font-bold">Veteranos</h1>
-    <p className="mt-2 text-lg">Homenagem aos membros aposentados.</p>
-  </div>
+  <PageLayout 
+    title="Veteranos" 
+    text="Homenagem aos membros aposentados." 
+    bgColor="bg-white" 
+    textColor="text-black" 
+  />
 );
 
 const App = () => {
   return (
     <Router>
-      <nav className="bg-green-600 p-4 text-white flex justify-between">
-        <Link to="/" className="font-bold text-lg">Exército Irlandês</Link>
-        <div>
-          <Link to="/recrutamento" className="mr-4">Recrutamento</Link>
-          <Link to="/hierarquia" className="mr-4">Hierarquia</Link>
-          <Link to="/comunicacao" className="mr-4">Comunicação</Link>
-          <Link to="/treinamento" className="mr-4">Treinamento</Link>
-          <Link to="/veteranos">Veteranos</Link>
+      <nav className="bg-green-700 p-4 text-white flex justify-between items-center shadow-lg">
+        <Link to="/" className="font-bold text-2xl">Exército Irlandês</Link>
+        <div className="space-x-4">
+          <Link to="/recrutamento" className="hover:underline">Recrutamento</Link>
+          <Link to="/hierarquia" className="hover:underline">Hierarquia</Link>
+          <Link to="/comunicacao" className="hover:underline">Comunicação</Link>
+          <Link to="/treinamento" className="hover:underline">Treinamento</Link>
+          <Link to="/veteranos" className="hover:underline">Veteranos</Link>
         </div>
       </nav>
       <Routes>
