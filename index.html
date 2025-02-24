@@ -1,96 +1,58 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exército Irlandês - Habbo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Exército Irlandês - Habbo</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#recrutamento">Recrutamento</a></li>
+                <li><a href="#hierarquia">Hierarquia</a></li>
+                <li><a href="#comunicacao">Comunicação</a></li>
+                <li><a href="#treinamento">Treinamento</a></li>
+                <li><a href="#veteranos">Veteranos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-const PageLayout = ({ title, text, bgColor, textColor }) => (
-  <div className={`p-6 text-center ${bgColor} ${textColor}`}>
-    <h1 className="text-4xl font-bold">{title}</h1>
-    <p className="mt-4 text-lg">{text}</p>
-    <div className="mt-6">
-      <Button asChild>
-        <Link to="/">Voltar</Link>
-      </Button>
-    </div>
-  </div>
-);
+    <section id="home">
+        <h2>Bem-vindo ao Exército Irlandês</h2>
+        <p>O melhor exército do Habbo Hotel! Junte-se a nós e faça parte dessa jornada.</p>
+    </section>
 
-const Home = () => (
-  <PageLayout 
-    title="Exército Irlandês - Habbo Hotel" 
-    text="Bem-vindo ao site oficial do Exército Irlandês no Habbo Hotel." 
-    bgColor="bg-green-500" 
-    textColor="text-white" 
-  />
-);
+    <section id="recrutamento">
+        <h2>Recrutamento</h2>
+        <p>Venha fazer parte da nossa equipe! Entre em contato para mais informações.</p>
+    </section>
 
-const Recrutamento = () => (
-  <PageLayout 
-    title="Recrutamento" 
-    text="Junte-se ao Exército Irlandês e faça parte da nossa equipe!" 
-    bgColor="bg-orange-500" 
-    textColor="text-white" 
-  />
-);
+    <section id="hierarquia">
+        <h2>Hierarquia</h2>
+        <p>Conheça as patentes e cargos do nosso exército.</p>
+    </section>
 
-const Hierarquia = () => (
-  <PageLayout 
-    title="Hierarquia" 
-    text="Conheça as patentes e posições dentro do Exército Irlandês." 
-    bgColor="bg-white" 
-    textColor="text-black" 
-  />
-);
+    <section id="comunicacao">
+        <h2>Comunicação</h2>
+        <p>Nosso servidor oficial no Discord e outras formas de contato.</p>
+    </section>
 
-const Comunicacao = () => (
-  <PageLayout 
-    title="Comunicação" 
-    text="Saiba como se comunicar através do Discord e TeamSpeak." 
-    bgColor="bg-green-500" 
-    textColor="text-white" 
-  />
-);
+    <section id="treinamento">
+        <h2>Treinamento</h2>
+        <p>Aprenda como crescer dentro do exército com nossos treinamentos.</p>
+    </section>
 
-const Treinamento = () => (
-  <PageLayout 
-    title="Treinamento e Instituições" 
-    text="Informações sobre academias e programas de treinamento." 
-    bgColor="bg-orange-500" 
-    textColor="text-white" 
-  />
-);
+    <section id="veteranos">
+        <h2>Veteranos</h2>
+        <p>Homenagem aos grandes guerreiros que ajudaram a construir nossa história.</p>
+    </section>
 
-const Veteranos = () => (
-  <PageLayout 
-    title="Veteranos" 
-    text="Homenagem aos membros aposentados." 
-    bgColor="bg-white" 
-    textColor="text-black" 
-  />
-);
-
-const App = () => {
-  return (
-    <Router>
-      <nav className="bg-green-700 p-4 text-white flex justify-between items-center shadow-lg">
-        <Link to="/" className="font-bold text-2xl">Exército Irlandês</Link>
-        <div className="space-x-4">
-          <Link to="/recrutamento" className="hover:underline">Recrutamento</Link>
-          <Link to="/hierarquia" className="hover:underline">Hierarquia</Link>
-          <Link to="/comunicacao" className="hover:underline">Comunicação</Link>
-          <Link to="/treinamento" className="hover:underline">Treinamento</Link>
-          <Link to="/veteranos" className="hover:underline">Veteranos</Link>
-        </div>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/recrutamento" element={<Recrutamento />} />
-        <Route path="/hierarquia" element={<Hierarquia />} />
-        <Route path="/comunicacao" element={<Comunicacao />} />
-        <Route path="/treinamento" element={<Treinamento />} />
-        <Route path="/veteranos" element={<Veteranos />} />
-      </Routes>
-    </Router>
-  );
-};
-
-export default App;
+    <footer>
+        <p>&copy; 2025 Exército Irlandês - Habbo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

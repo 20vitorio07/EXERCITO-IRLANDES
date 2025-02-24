@@ -1,59 +1,51 @@
-body {
-    background: url('fundo-exercito.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: white;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-.container {
-    max-width: 400px;
-    margin: 100px auto;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: #169B62;
-    font-size: 24px;
-}
-
-.button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+body {
+    background-color: #f5f5f5;
+    color: #333;
     text-align: center;
-    font-size: 18px;
 }
 
-.login {
-    background: #169B62;
+header {
+    background: linear-gradient(to right, green, white, orange);
+    color: black;
+    padding: 15px 0;
+    font-size: 20px;
 }
 
-.register {
-    background: #FF883E;
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+section:nth-child(even) {
+    background-color: #ddd;
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
+    background: green;
+    color: white;
+    padding: 10px;
+    position: relative;
 }
