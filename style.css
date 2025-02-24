@@ -1,0 +1,78 @@
+body {
+    background: linear-gradient(to right, #169B62, #FFFFFF, #FF883E);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #169B62;
+    color: white;
+    padding: 15px 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2 {
+    color: #169B62;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.login {
+    background: #169B62;
+}
+
+.register {
+    background: #FF883E;
+}
+
+.news {
+    max-width: 600px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.news h2 {
+    color: #FF883E;
+}
+
+article {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+footer {
+    background: #FF883E;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
