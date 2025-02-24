@@ -1,45 +1,37 @@
 body {
-    background: linear-gradient(to right, #169B62, #FFFFFF, #FF883E);
+    background: url('fundo-exercito.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: Arial, sans-serif;
     text-align: center;
-    color: #333;
+    color: white;
     margin: 0;
     padding: 0;
 }
 
-header {
-    background: #169B62;
-    color: white;
-    padding: 15px 0;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 .container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: rgba(255, 255, 255, 0.8);
+    max-width: 400px;
+    margin: 100px auto;
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-h1, h2 {
+h1 {
     color: #169B62;
+    font-size: 24px;
 }
 
 .button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
 }
 
 .login {
@@ -50,29 +42,18 @@ h1, h2 {
     background: #FF883E;
 }
 
-.news {
-    max-width: 600px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 15px;
-    border-radius: 10px;
-}
-
-.news h2 {
-    color: #FF883E;
-}
-
-article {
-    text-align: left;
+input {
+    width: 100%;
     padding: 10px;
-    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
 }
 
 footer {
-    background: #FF883E;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
+    position: absolute;
+    bottom: 10px;
     width: 100%;
+    text-align: center;
+    font-size: 14px;
 }
