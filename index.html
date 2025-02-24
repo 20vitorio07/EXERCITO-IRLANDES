@@ -1,20 +1,80 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Exército Irlandês</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Bem-vindo ao Exército Irlandês</h1>
-        <form action="login.php" method="POST">
-            <input type="text" name="username" placeholder="Usuário" required>
-            <input type="password" name="password" placeholder="Senha" required>
-            <button type="submit" class="button login">Entrar</button>
-        </form>
-        <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+
+const Home = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Exército Irlandês - Habbo Hotel</h1>
+    <p className="mt-2 text-lg">Bem-vindo ao site oficial do Exército Irlandês no Habbo Hotel.</p>
+    <div className="mt-4">
+      <Button asChild>
+        <Link to="/recrutamento">Recrutamento</Link>
+      </Button>
     </div>
-</body>
-</html>
+  </div>
+);
+
+const Recrutamento = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Recrutamento</h1>
+    <p className="mt-2 text-lg">Junte-se ao Exército Irlandês e faça parte da nossa equipe!</p>
+    <Button asChild>
+      <Link to="/">Voltar</Link>
+    </Button>
+  </div>
+);
+
+const Hierarquia = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Hierarquia</h1>
+    <p className="mt-2 text-lg">Conheça as patentes e posições dentro do Exército Irlandês.</p>
+  </div>
+);
+
+const Comunicacao = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Comunicação</h1>
+    <p className="mt-2 text-lg">Saiba como se comunicar através do Discord e TeamSpeak.</p>
+  </div>
+);
+
+const Treinamento = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Treinamento e Instituições</h1>
+    <p className="mt-2 text-lg">Informações sobre academias e programas de treinamento.</p>
+  </div>
+);
+
+const Veteranos = () => (
+  <div className="p-6 text-center">
+    <h1 className="text-3xl font-bold">Veteranos</h1>
+    <p className="mt-2 text-lg">Homenagem aos membros aposentados.</p>
+  </div>
+);
+
+const App = () => {
+  return (
+    <Router>
+      <nav className="bg-green-600 p-4 text-white flex justify-between">
+        <Link to="/" className="font-bold text-lg">Exército Irlandês</Link>
+        <div>
+          <Link to="/recrutamento" className="mr-4">Recrutamento</Link>
+          <Link to="/hierarquia" className="mr-4">Hierarquia</Link>
+          <Link to="/comunicacao" className="mr-4">Comunicação</Link>
+          <Link to="/treinamento" className="mr-4">Treinamento</Link>
+          <Link to="/veteranos">Veteranos</Link>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recrutamento" element={<Recrutamento />} />
+        <Route path="/hierarquia" element={<Hierarquia />} />
+        <Route path="/comunicacao" element={<Comunicacao />} />
+        <Route path="/treinamento" element={<Treinamento />} />
+        <Route path="/veteranos" element={<Veteranos />} />
+      </Routes>
+    </Router>
+  );
+};
+
+export default App;
